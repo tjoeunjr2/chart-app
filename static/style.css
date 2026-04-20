@@ -1,0 +1,12 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, sans-serif; background: #0f0f13; color: #eee; min-height: 100vh; }
+.container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+h1 { font-size: 1.8rem; margin-bottom: 1.5rem; color: #fff; }
+.tabs { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+.tab { padding: 8px 24px; border: 1px solid #333; background: transparent; color: #aaa; border-radius: 6px; cursor: pointer; font-size: 0.95rem; }
+.tab.active { background: #7c6af7; border-color: #7c6af7; color: #fff; }
+.controls { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.controls input, .controls select { padding: 8px 12px; background: #1e1e2a; border: 1px solid #333; color: #eee; border-radius: 6px; font-size: 0.9rem; flex: 1; min-width: 120px; }
+.controls button { padding: 8px 20px; background: #7c6af7; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+.controls button:hover { background: #6a58e0; }
+canvas { width: 100% !important; max-height: 400px; }
