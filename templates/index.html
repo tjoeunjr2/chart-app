@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>주가 & 비트코인 차트</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 주가 & 코인 차트</h1>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('stock')">주식</button>
+      <button class="tab" onclick="switchTab('crypto')">암호화폐</button>
+    </div>
+
+    <!-- 주식 섹션 -->
+    <div id="stock-section" class="section">
+      <div class="controls">
+        <input id="stock-input" type="text" placeholder="티커 입력 (예: AAPL, TSLA, 005930.KS)" value="AAPL">
+        <select id="stock-period">
+          <option value="1mo">1개월</option>
+          <option value="3mo">3개월</option>
+          <option value="6mo">6개월</option>
+          <option value="1y">1년</option>
+        </select>
+        <button onclick="loadStock()">조회</button>
+      </div>
+      <canvas id="stockChart"></canvas>
+    </div>
+
+    <!-- 코인 섹션 -->
+    <div id="crypto-section" class="section" style="display:none">
+      <div class="controls">
+        <select id="coin-select">
+          <option value="bitcoin">비트코인</option>
+          <option value="ethereum">이더리움</option>
+          <option value="solana">솔라나</option>
+          <option value="ripple">리플</option>
+        </select>
+        <select id="coin-days">
+          <option value="7">7일</option>
+          <option value="30">30일</option>
+          <option value="90">90일</option>
+          <option value="365">1년</option>
+        </select>
+        <button onclick="loadCrypto()">조회</button>
+      </div>
+      <canvas id="cryptoChart"></canvas>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
